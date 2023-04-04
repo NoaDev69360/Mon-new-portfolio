@@ -1,0 +1,288 @@
+body{
+    font-family: 'Nunito', sans-serif;
+}
+
+/*NAVBAR*/
+
+.navbar {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+  
+.navbar ul {
+    margin-top: 2rem;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+  
+.navbar li {
+    margin: 0 60px;
+}
+  
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/*HEADER*/
+
+.header img{
+    height:130vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: 1;
+}
+
+.onHeader{
+    margin-left: 60rem;
+    position: absolute;
+    top: 300px;
+    z-index: 2;
+    font-size: 50px;
+    color: white;
+}
+
+.bloc1 .btn-header{
+    position: absolute;
+    top: 400px;
+    z-index: 2;
+    margin-left: 61rem;
+}
+
+.bloc1 .btn-header button{
+    padding: 7px 40px ;
+    border-radius: 20px;
+    border: white solid 2px;
+    background-color: rgb(41, 41, 41);
+    color: white;
+}
+
+.header-bottom h1{
+    position: absolute;
+    z-index: 2;
+    color: white;
+    margin-top: 50rem;
+    margin-left: 43rem;
+}
+
+/*SCROLL*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/*General styling for structure*/
+
+.bloc2 .restaurant{
+    height: 65vh;
+    width: 40vw;
+}
+
+
+.bloc2 .hr-resto{
+  width: 20rem;
+  margin-left: 10rem;
+  margin-top: 1.5rem;
+}
+
+.bloc2 h1{
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.bloc2 .okape{
+  height: 65vh;
+  width: 45vw;
+}
+
+.bloc2 .jus{
+  margin-left: 8rem;
+}
+
+.bloc2 .hr-jus{
+  width: 15rem;
+  margin-left: 13rem;
+  margin-top: 1.5rem;
+}
+
+.bloc2 .cardeluxe{
+  height: 50vh;
+  width: 45vw;
+}
+
+.bloc2 .location{
+  margin-left: 2rem;
+}
+
+.bloc2 .hr-location{
+  width: 22rem;
+  margin-left: 10rem;
+  margin-top: 1.5rem;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+}
+
+header h2 {
+  font-weight: 400;
+}
+
+.scroll {
+  height: 110vh;
+  min-height: 450px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+/* .scroll:nth-of-type(1) {
+  background-image: url(img/img-fond2.png);
+} */
+.scroll:nth-of-type(2) {
+    background-image: url(img/img-fond2.png);
+}
+.scroll:nth-of-type(3) {
+    background-image: url(img/img-fond2.png);
+}
+.scroll:nth-of-type(4) {
+    background-image: url(img/img-fond2.png);
+}
+
+.scroll:nth-of-type(even) {
+  flex-direction: row-reverse;
+}
+
+.scroll-element,
+.scroll-caption {
+  width: 50%;
+}
+
+.scroll-caption {
+  margin: 1rem;
+  color: white;
+}
+
+
+@media screen and (max-width: 650px) {
+.scroll,
+.scroll:nth-of-type(even) {
+    flex-direction: column;
+    align-content: inherit;
+}
+
+.scroll-element {
+    height: 100%;
+}
+
+  .scroll-element,
+  .scroll-caption {
+    width: 100%;
+}
+}
+/**Styling scrollable elements*/
+
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.fade-in {
+  animation: fade-in 1s ease-in-out both;
+}
+
+.scrolled.fade-in-bottom img {
+  animation: fade-in-bottom 1s ease-in-out both;
+}
+
+.scrolled.slide-left img{
+  animation: slide-in-left 1s ease-in-out both;
+}
+
+.scrolled.slide-right img {
+  animation: slide-in-right 1s ease-in-out both;
+}
+
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*-----------------------------------PARCOURS---------------------------*/
+
+
+.bloc3 img{
+  height: 100;
+  width: 100%;
+}
+
